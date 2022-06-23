@@ -1,0 +1,33 @@
+@import url('https://fonts.googleapis.com/css2?family=Roboto:wght@500&display=swap');
+
+$blue: #1d4e89de;
+$white: #ffffff;
+$font: 'Roboto', sans-serif;
+
+@mixin reset-list {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+
+@mixin flex {
+    display: flex;
+    align-items: center;
+}
+
+@import 'main';
+
+* {
+    @include reset-list;
+}
+
+body {
+    @include flex;
+    justify-content: center;
+    font-family: $font;
+    color: $white;
+    height: 100vh;
+    margin: 0;
+    background-image: url(https://source.unsplash.com/1600x900/?landscape);
+    font-size: 20pt;
+}

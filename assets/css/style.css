@@ -1,0 +1,71 @@
+@import url("https://fonts.googleapis.com/css2?family=Roboto:wght@500&display=swap");
+.main {
+  background-color: #1d4e89de;
+  height: auto;
+  width: 100%;
+  max-width: 460px;
+  border-radius: 10px;
+}
+.main__input {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+}
+.main__search {
+  width: 23rem;
+  height: 2.6rem;
+  border-radius: 0.5rem;
+  background-color: rgba(255, 255, 255, 0.181);
+  margin-top: 1rem;
+  padding: 1rem;
+}
+.main__icon {
+  position: absolute;
+  margin: -0.3rem 0rem 0rem -2rem;
+  cursor: pointer;
+}
+.main__container {
+  padding: 1rem;
+  line-height: 1.6rem;
+}
+.main__title {
+  font-size: 22pt;
+}
+.main__temp {
+  font-size: 30pt;
+  padding-top: 1.5rem;
+}
+.main__infos {
+  display: flex;
+  flex-direction: column;
+  align-items: flex-start;
+  padding-top: 1.5rem;
+}
+.main__text {
+  padding-top: 1rem;
+  font-size: 16pt;
+}
+.main__humidity {
+  padding-top: 1rem;
+  line-height: 3rem;
+}
+
+* {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+}
+
+body {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  font-family: "Roboto", sans-serif;
+  color: #ffffff;
+  height: 100vh;
+  margin: 0;
+  background-image: url(https://source.unsplash.com/1600x900/?landscape);
+  font-size: 20pt;
+}
+
+/*# sourceMappingURL=style.css.map */
