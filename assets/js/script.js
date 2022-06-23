@@ -1,12 +1,12 @@
-let api_key = '36a295a87dabfe671f0f25c54a02cf77'
+let api_key = '92adc081'
 
-const input = document.querySelector("#search")
+const input = document.querySelector("input")
 const searchButton = document.querySelector(".main__icon")
-const container = document.querySelector(".main__container")
+// const container = document.querySelector(".main__container")
 
 searchButton.addEventListener('click', searchCity)
 input.addEventListener('keyup', function(event) {
-    if (event.keyCode === 13) {
+    if (event.keyCode == 13) {
         searchCity()
         return
     }
@@ -14,68 +14,43 @@ input.addEventListener('keyup', function(event) {
 
 async function searchCity() {
     const inputValue = input.value
+    console.log(inputValue)
     if (inputValue != '') { 
-        cleanAll()
-        const citys = await searchCityByName(inputValue)
-        citys.forEach(city => renderCity(city))
+        const getCitys = await searchCityByName(inputValue)
+        Array.from(getCitys).forEach(city => renderCity(allCitys))
     }
 }
 
-function cleanAll() {
-    container.innerHTML = ''
-}
-
-async function searchCityByName(title) {
-    const url = `http://apiadvisor.climatempo.com.br/api/v1/anl/synoptic/locale/BR?token=${api_key}&query=${title}&language=pt_br-BR`
+async function searchCityByName(city_name) {
+    const url = `https://api.hgbrasil.com/weather?format=json-cors&key=${api_key}&city_name=${city_name}`
     const fetchResponse = await fetch(url)
     const { results } = await fetchResponse.json()
+    console.log(results)
     return results
 }
 
 async function getClimate() {
-    const url = `http://apiadvisor.climatempo.com.br/api/v1/anl/synoptic/locale/BR?token=${api_key}&language=pt_br-BR`
-    const fetchResponse = await fetch(url)
+    const url = `https://api.hgbrasil.com/weather?format=json-cors&key=${api_key}`
+    const fetchResponse = await fetch(url)      
     const { results } = await fetchResponse.json()
     return results
 }
 
 async function getAllCitys() {
-    const citys = await getClimate()
-    citys.forEach(city => renderCity(city))
+    const getCitys = await getClimate() 
+    Array.from(getCitys).forEach(city => renderCity(allCitys))
 }
 
 window.onload = function() {
     getAllCitys()
 }
 
-function renderCity(city) {
-    const {name, state, country, climate_temperature, text} = city
+function renderCity(allCitys) {
+    const { temp, description, city , humidity, wind_speedy} = allCitys
 
-    const title = document.createElement('h2')
-    title.classList.add('main__title')
-    title.textContent = `${country}`
-    container.appendChild(title)
-
-    const temp = document.createElement('h1')
-    temp.classList.add('main__temp')
-    temp.textContent = `${climate_temperature}`
-    container.appendChild(temp)
-
-    const infos = document.createElement('div')
-    infos.classList.add('main__infos')
-
-    const image = document.createElement('img')
-    image.classList.add('main__img')
-    image.src = image
-    infos.appendChild(image)
-    
-    const description = document.createElement('span')
-    description.classList.add('main__description')
-    infos.appendChild(description)
-
-    const textContent = document.createElement('span')
-    textContent.classList.add('main__text')
-    textContent.textContent = `${text}`
-    infos.appendChild(textContent)
-    container.appendChild(infos)
+    document.querySelector(".main__title").innerHTML = "Temperatura em" + city
+    document.querySelector(".main__description").innerHTML = description
+    document.querySelector(".main__temp").innerHTML = temp + "°C"
+    document.querySelector(".main__humidity").innerHTML = "Humidade: " + humidity + "%"
+    document.querySelector(".main__wind").innerHTML = "Vento: " + wind_speedy + " km/h"
 }

@@ -42,16 +42,10 @@
 
     &__infos {
         display: flex;
-        flex-direction: column;
-        align-items: flex-start;
+        align-items: center;
         padding-top: 1.5rem;
     }
-
-    &__text {
-        padding-top: 1rem;
-        font-size: 16pt;
-    }
-
+    
     &__humidity {
         padding-top: 1rem;
         line-height: 3rem;

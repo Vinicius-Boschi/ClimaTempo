@@ -37,13 +37,8 @@
 }
 .main__infos {
   display: flex;
-  flex-direction: column;
-  align-items: flex-start;
+  align-items: center;
   padding-top: 1.5rem;
-}
-.main__text {
-  padding-top: 1rem;
-  font-size: 16pt;
 }
 .main__humidity {
   padding-top: 1rem;
