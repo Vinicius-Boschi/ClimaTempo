@@ -5,18 +5,11 @@ Site para se informar sobre o clima de sua cidade.
 ![climatempo](https://user-images.githubusercontent.com/74377158/175696881-b1f587f8-de4f-4083-a5a9-5bd0cef0c274.jpg)
 
 # <h3> :file_folder: Acessar o projeto</h3>
-No terminal, clone o projeto:
 
-```
-git clone https://github.com/Vinicius-Boschi/ClimaTempo.git
-```
-
-# <h3> :wrench: Abrir e rodar o projeto</h3>
-Com o projeto clonado, você irá precisar de uma chave da api que você pode conseguir [aqui](https://openweathermap.org/api).
-Com a chave você irá por ela no arquivo <strong>apikeyExample.js</strong>
+Acesse [aqui](https://weathercitys.netlify.app/) para pode testar o projeto.
 
 # <h3> :heavy_check_mark: Status do Projeto:</h3>
-![Badge em Desenvolvimento](https://img.shields.io/static/v1?label=STATUS&message=CONCLUIDO&color=blue&style=for-the-badge)
+![Badge Concluido em Desenvolvimento](https://img.shields.io/static/v1?label=STATUS&message=CONCLUIDO&color=blue&style=for-the-badge)
 
 # <h3> :hammer: Funcionalidades do projeto</h3>
 - `Funcionalidade 1`: Pesquisa de cidade.
