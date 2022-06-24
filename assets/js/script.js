@@ -1,12 +1,9 @@
-import { api_key } from "../../apikey.js"
-
 const input = document.querySelector("input")
 const searchButton = document.querySelector(".main__icon")
 
 let results = {
-    lang: 'pt_br',
     fetchResults: function(city) { 
-        fetch("https://api.openweathermap.org/data/2.5/weather?q=" + city + "&units=metric&appid=" + `${api_key}` + '&lang=' + this.lang) 
+        fetch(`https://weather.contrateumdev.com.br/api/weather/city/?city=${city}`) 
         .then((response) => {
             if (!response.ok) { 
                 alert("Nenhuma informação encontrada!")
@@ -22,7 +19,7 @@ let results = {
         const { icon, description } = data.weather[0]
         const { temp, humidity , temp_min, temp_max} = data.main
         const { speed } = data.wind
-        const { country, sunrise, sunset} = data.sys
+        const { country } = data.sys
         let now = new Date()
         date.textContent = date(now)
 
