@@ -1,6 +1,6 @@
 @import url('https://fonts.googleapis.com/css2?family=Roboto:wght@500&display=swap');
 
-$blue: #1d4e89de;
+$blue: #20a4b5cf;
 $white: #ffffff;
 $font: 'Roboto', sans-serif;
 
@@ -28,6 +28,6 @@ body {
     color: $white;
     height: 100vh;
     margin: 0;
-    background-image: url(https://source.unsplash.com/1600x900/?landscape);
+    background: linear-gradient(rgba(0, 0, 0, 0.7), rgba(0, 0, 0, 0.7)), url(https://source.unsplash.com/1600x900/?landscape);
     font-size: 20pt;
 }

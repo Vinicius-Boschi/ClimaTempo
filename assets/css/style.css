@@ -1,15 +1,19 @@
 @import url("https://fonts.googleapis.com/css2?family=Roboto:wght@500&display=swap");
 .main {
-  background-color: #1d4e89de;
+  background-color: #20a4b5cf;
   height: auto;
   width: 100%;
-  max-width: 460px;
+  max-width: 400px;
   border-radius: 10px;
+  text-align: center;
 }
 .main__input {
   display: flex;
   align-items: center;
   justify-content: center;
+}
+.main__input ::placeholder {
+  color: #ffffff;
 }
 .main__search {
   width: 23rem;
@@ -28,21 +32,38 @@
   padding: 1rem;
   line-height: 1.6rem;
 }
+.main__date {
+  font-size: 10pt;
+}
 .main__title {
-  font-size: 22pt;
+  font-size: 26pt;
+  padding-top: 0.5rem;
+}
+.main__img {
+  width: 40%;
 }
 .main__temp {
-  font-size: 30pt;
-  padding-top: 1.5rem;
+  font-size: 27pt;
+  margin-top: -1rem;
 }
-.main__infos {
+.main__text {
+  margin-top: 1rem;
+}
+.main__description {
+  text-transform: capitalize;
+  font-size: 16pt;
+}
+.main__max {
   display: flex;
-  align-items: center;
-  padding-top: 1.5rem;
-}
-.main__humidity {
+  justify-content: space-between;
   padding-top: 1rem;
-  line-height: 3rem;
+  font-size: 15pt;
+}
+.main__climate {
+  display: flex;
+  font-size: 15pt;
+  padding-top: 1rem;
+  justify-content: space-between;
 }
 
 * {
@@ -59,7 +80,7 @@ body {
   color: #ffffff;
   height: 100vh;
   margin: 0;
-  background-image: url(https://source.unsplash.com/1600x900/?landscape);
+  background: linear-gradient(rgba(0, 0, 0, 0.7), rgba(0, 0, 0, 0.7)), url(https://source.unsplash.com/1600x900/?landscape);
   font-size: 20pt;
 }
 

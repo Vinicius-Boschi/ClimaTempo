@@ -2,13 +2,18 @@
     background-color: $blue;
     height: auto;
     width: 100%;
-    max-width: 460px;
+    max-width: 400px;
     border-radius: 10px;
+    text-align: center;
 
     &__input {
         display: flex;
         align-items: center;
         justify-content: center;
+
+        ::placeholder {
+            color: $white;
+        }
     }
 
     &__search {
@@ -31,23 +36,44 @@
         line-height: 1.6rem;
     }
 
+    &__date {
+        font-size: 10pt;
+    }
+
     &__title {
-        font-size: 22pt;
+        font-size: 26pt;
+        padding-top: .5rem;
+    }
+
+    &__img {
+        width: 40%;
     }
 
     &__temp {
-        font-size: 30pt;
-        padding-top: 1.5rem;
-    }   
-
-    &__infos {
-        display: flex;
-        align-items: center;
-        padding-top: 1.5rem;
+        font-size: 27pt;
+        margin-top: -1rem;
     }
-    
-    &__humidity {
+
+    &__text {
+        margin-top: 1rem;
+    }
+
+    &__description {
+        text-transform: capitalize;
+        font-size: 16pt;
+    }
+
+    &__max {
+        display: flex;
+        justify-content: space-between;
         padding-top: 1rem;
-        line-height: 3rem;
+        font-size: 15pt;
+    }
+
+    &__climate {
+        display: flex;
+        font-size: 15pt;
+        padding-top: 1rem;
+        justify-content: space-between;
     }
 }
